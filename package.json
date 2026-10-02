@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "concurrently \"yarn build --watch\" \"yarn test\"",
     "build": "tsup --onSuccess \"yarn yalc publish && yarn link && yarn doc\"",
+    "start": "next start -p ${PORT:-3000}",
     "type-check": "tsc",
     "lint": "eslint --ignore-path .gitignore \"{src,tests}/**/*.+(ts|js|tsx)\"",
     "lint:fix": "yarn lint --fix && prettier --write .",
